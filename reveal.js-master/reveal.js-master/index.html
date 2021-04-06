@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="css/App.css">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="App">
+					<a href="https://reactjs.org">
+						<img src=logo.svg class="App-logo" alt="logo" style="height: 350px;" />
+					</a>
+					<h2>
+						What is React js?
+					</h2>
+
+				</div>
+			</section>
+			<section>
+				<section>
+					<h2>React is ...</h2>
+					<a href="#" class="navigate-down">
+						<img style="background: rgba(199, 189, 226, 0.733);" width="120" height="138"
+							data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+					</a>
+				</section>
+				<section>a JavaScript library created by Facebook</section>
+				<section>a User Interface (UI) library</section>
+				<section>a tool for building UI components</section>
+			</section>
+			<section>
+				<h2 data-id="code-title">Simple Code</h2>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+				
+					<!DOCTYPE html>
+					<html lang="en">
+					<title>Test React</title>
+
+					<!-- Load React API -->
+					<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+					<!-- Load React DOM-->
+					<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+					<!-- Load Babel Compiler -->
+					<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+					#
+					body
+						JSX Babel code
+					end body
+					#
+					</html>
+				</code></pre>
+			</section>
+			<section>
+				<section>
+					<h2>
+						What is babel?
+
+					</h2>
+					<a href="#" class="navigate-down">
+						<img class="r-frame" style="background: rgba(126, 187, 206, 0.733);" width="120" height="138"
+							data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+					</a>
+				</section>
+				<section>
+					Babel is a JavaScript compiler that can translate markup or programming languages into JavaScript.
+				</section>
+				<section>
+					With Babel, you can use the newest features of JavaScript (ES6 - ECMAScript 2015).
+				</section>
+				<section>
+					Babel is available for different conversions. React uses Babel to convert JSX into JavaScript.
+				</section>
+				<section>
+					<h2>is needed for using Babel.</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+							<script type="text/babel"> </script>
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>What is JSX?</h2>
+					<p>|</p>
+					<p>V</p>
+				</section>
+				<section>
+					JSX stands for JavaScript XML.
+				</section>
+				<section>
+					JSX is an XML/HTML like extension to JavaScript.
+				</section>
+				<section>
+					<h2>
+						Example:
+					</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						const element = <h1>Hello World!</h1>
+					</code></pre>
+				</section>
+				<section>
+					As you can see above, JSX is not JavaScript nor HTML.
+
+					JSX is a XML syntax extension to JavaScript that also comes with the full power of ES6 (ECMAScript
+					2015).
+
+					Just like HTML, JSX tags can have a tag names, attributes, and children. If an attribute is wrapped
+					in curly braces, the value is a JavaScript expression.
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>React DOM Render</h2>
+					<p>|</p>
+					<p>V</p>
+				</section>
+				<section>
+					The method ReactDom.render() is used to render (display) HTML elements:
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+					<div id="id01">Hello World!</div>
+					<script type="text/babel">
+						ReactDOM.render(<h1>Hello React!</h1>,
+							document.getElementById('id01'));
+					</script>
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>JSX Expressions</h2>
+					<p>|</p>
+					<p>V</p>
+				</section>
+				<section>
+					Expressions can be used in JSX by wrapping them in curly {} braces.
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						<div id="id01">Hello World!</div>
+						<script type="text/babel">
+							const name = 'John Doe';
+							ReactDOM.render(
+								<h1>Hello {name}!</h1>,
+								document.getElementById('id01'));
+						</script>
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>React Elements</h2>
+					<p>|</p>
+					<p>v</p>
+				</section>
+				<section>
+					<p>
+						React applications are usually built around a single HTML element.
+						React developers often call this the root node (root element):
+					</p>
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						<div id="root"></div>
+					</code></pre>
+				</section>
+				<section>
+					<p>
+						React elements look like this:
+					</p>
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers>
+						const element = <h1>Hello React!</h1>
+					</code>
+					</code></pre>
+				</section>
+				<section>
+					<p>
+						Elements are rendered (displayed) with the ReactDOM.render() method:
+					</p>
+				</section>
+				<section>
+					<h2>Example</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						ReactDOM.render(element, document.getElementById('root'));
+					</code></pre>
+				</section>
+				<section>
+					<p>
+						React elements are immutable. They cannot be changed.
+						The only way to change a React element is to render a new element every time:
+					</p>
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trin data-line-numbers">
+						function tick() {
+							const element = (<h1>{new Date().toLocaleTimeString()}</h1>);
+							ReactDOM.render(element, document.getElementById('root'));
+						}
+						setInterval(tick, 1000);
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>React Components</h2>
+					<p>|</p>
+					<p>v</p>
+				</section>
+				<section>
+					<p>
+						React components are JavaScript functions.
+						This example creates a React component named "Welcome":
+					</p>
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						function Welcome() {
+						return <h1>Hello React!</h1>;
+					}
+					ReactDOM.render(<Welcome />, document.getElementById('root'));re>
+				</code>
+				</section>
+				<section>
+					<p>
+						React can also use ES6 classes to create components.
+						This example creates a React component named Welcome with a render method:
+					</p>
+				</section>
+				<section>
+					<h2>Example:</h2>
+					<pre><code class="hljs" data-trim data-line-numbers">
+						class Welcome extends React.Component {
+							render() { return(<h1>Hello React!</h1>); }
+						}
+						ReactDOM.render(<Welcome />, document.getElementById('root'));
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section id="fragments">
+				<h2>The end.</h2>
+				<p>|</p>
+					<p>v</p>
+				<p class="fragment">... Thanks ...</p>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
